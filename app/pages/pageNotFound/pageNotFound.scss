@@ -1,0 +1,100 @@
+.container-page-not-found {
+  height: 100vh;
+  background-size: cover;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.8) 0%,
+      rgba(10, 10, 10, 0) 25%,
+      rgba(10, 10, 10, 0) 60%,
+      #0a0a0a 100%
+    ),
+    url("/assets/baja-atolado.png");
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 -150px 150px -100px #0a0a0a;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+
+  .content-box {
+    max-width: 600px;
+    animation: fadeIn Up 0.8s ease-out;
+
+    .error-code {
+      font-size: 10rem;
+      margin: 0;
+      line-height: 1;
+      color: var(--primary-bg);
+      -webkit-text-stroke: 3px var(--text-yellow-light);
+      text-shadow: 0 0 30px rgba(149, 255, 141, 0.5);
+      font-weight: 900;
+      letter-spacing: -5px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 1rem 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: var(--secondary-text);
+      margin-bottom: 3rem;
+      line-height: 1.6;
+    }
+
+    .back-home-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background-color: transparent;
+      color: var(--text-yellow-light);
+      border: 2px solid var(--text-yellow-light);
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(149, 255, 141, 0.2);
+
+      &:hover {
+        background-color: var(--text-yellow-light);
+        color: var(--primary-bg);
+        box-shadow: 0 0 30px rgba(149, 255, 141, 0.6);
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container-page-not-found .content-box {
+    .error-code {
+      font-size: 7rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}

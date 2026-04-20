@@ -1,0 +1,103 @@
+.welcome-section {
+  height: 100vh;
+  width: 100%;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.8) 0%,
+      rgba(10, 10, 10, 0) 25%,
+      rgba(10, 10, 10, 0) 60%,
+      #0a0a0a 100%
+    ),
+    url("/assets/page-home-thumbnail.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.welcome-container {
+  height: 82%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5% 15vh 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  .glass-info-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: rgba(20, 20, 20, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 1.2rem 3rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-left: 4px solid var(--text-yellow-light);
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+
+      .info-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-yellow-light);
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .info-value {
+        font-size: 1.2rem;
+        color: #ffffff;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .info-divider {
+      width: 1px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-container {
+    justify-content: center;
+    padding-bottom: 8rem;
+
+    .glass-info-box {
+      width: 100%;
+      max-width: 400px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1.2rem;
+      gap: 1rem;
+
+      .info-item .info-value {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-container .glass-info-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    .info-divider {
+      width: 100%;
+      height: 1px;
+    }
+  }
+}

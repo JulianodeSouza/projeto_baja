@@ -1,0 +1,53 @@
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #1e1e1e;
+  --main-text: #fff;
+  --secondary-text: #e0e0e0;
+  --text-yellow-light: #f8c659;
+  --text-secondary-yellow-dark: #f8bc39;
+  --primary-dark: #404040;
+  --font-size: 11px;
+}
+
+body {
+  font-family: Arial, "Roboto Serif", serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  color: var(--main-text);
+  font-size: var(--font-size);
+  line-height: normal;
+}
+
+.header-link {
+  color: var(--main-text);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Light weight */
+.light-text-roboto {
+  font-family: "Roboto Serif", serif;
+  font-weight: 300;
+}
+
+/* Regular */
+.regular-text-roboto {
+  font-family: "Roboto Serif", serif;
+  font-weight: 400;
+}
+
+/* Bold */
+.bold-text-roboto {
+  font-family: "Roboto Serif", serif;
+  font-weight: 700;
+}
+
+/* Italic */
+.italic-text-roboto {
+  font-family: "Roboto Serif", serif;
+  font-style: italic;
+}
